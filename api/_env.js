@@ -1,4 +1,6 @@
 import dotenv from 'dotenv';
 
-dotenv.config({ path: '.env.local' });
-dotenv.config({ path: '.env' });
+if (!process.env.VERCEL) {
+  dotenv.config({ path: '.env.local' });
+  dotenv.config({ path: '.env' });
+}
