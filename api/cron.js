@@ -1,3 +1,4 @@
+import './_env.js';
 export default async function handler(request, response) {
   try {
     const userAgent = request.headers['user-agent'] || '';
